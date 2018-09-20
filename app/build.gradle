@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 27
+  buildToolsVersion "27.0.3"
+  defaultConfig {
+    applicationId "com.labcave.labcavemediation.android.sample"
+    minSdkVersion 16
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+
+    multiDexEnabled true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['libs']
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile 'com.android.support:multidex:1.0.2'
+  compile 'com.android.support:appcompat-v7:27.1.0'
+  compile 'com.google.android.gms:play-services-base:15.0.1'
+  compile 'com.google.android.gms:play-services-ads:15.0.1'
+
+  compile(name: 'labcavemediation-base-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-admob-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-adcolony-noso-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-applovin-fat-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-facebook-2.0.1', ext: 'aar')
+  compile(name: 'AudienceNetwork', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-chartboost-fat-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-inmobi-fat-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-startapp-fat-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-unityads-fat-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-vungle-fat-2.0.1', ext: 'aar')
+}
