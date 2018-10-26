@@ -50,6 +50,8 @@ sourceSets {
 dependencies {
     compile(name: 'labcavemediation-mediation-admob-2.0.1', ext: 'aar')
     compile 'com.google.android.gms:play-services-ads:+'
+    compile 'com.google.android.ads.consent:consent-library:1.0.6'
+
 }
 ```
 
