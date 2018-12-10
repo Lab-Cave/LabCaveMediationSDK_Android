@@ -1,6 +1,6 @@
 LabCave Mediation Android SDK
 =====
-The current version has been tested using API 21, 23, 25 and 26 and require a minSdkVersion >= 15
+The current version has been tested using API 21, 23, 25 and 26 and require a minSdkVersion >= 17
 
 ## Download SDK
 
