@@ -203,6 +203,13 @@ You can enable loggin to check what is happening
 LabCaveMediation.INSTANCE.setLogging(true);
 ```
 
+To check if the integration of each thirparty is correct open the test module:
+
+```java
+*Make sure you remove this test module on your release build.
+
+LabCaveMediation.INSTANCE.initTest(this, "YOUR_API_HASH");
+```
 If you use proguard add these rules:
 
 ```java
