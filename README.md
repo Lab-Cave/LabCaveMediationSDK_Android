@@ -203,7 +203,7 @@ You can enable loggin to check what is happening
 LabCaveMediation.INSTANCE.setLogging(true);
 ```
 
-To check if the integration of each thirparty is correct open the test module:
+To check if the integration of each thirparty is correct open the test module, you must call the "Init" method first and wait till the "onInit" delegate method is called:
 
 ```java
 *Make sure you remove this test module on your release build.
