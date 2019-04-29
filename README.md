@@ -127,14 +127,13 @@ LabCaveMediation.INSTANCE.init(this, APP_HASH);
 ```
 The appHash is the hash of your app, you can get it in https://mediation.labcavegames.com/panel/apps, "context" is your activity context.
 
-When you init the sdk then you can request ads. Important the mediation sdk auto fetch all ads for you, when you call the init method also will fecth the first ads, so you only need to call the showMethods. Display ads with the corresponding action according to the type desired:
+When you init the sdk then you can show ads. Important the mediation sdk auto fetch all ads for you, when you call the init method also will fecth the first ads, so you only need to call the showMethods. Display ads with the corresponding action according to the type desired:
 
 ```java
 LabCaveMediation.INSTANCE.showBanner(context, tag);
 LabCaveMediation.INSTANCE.showBanner(labcaveBannerView, tag);
 
 LabCaveMediation.INSTANCE.showInterstitial(context, tag);
-LabCaveMediation.INSTANCE.showVideo(context, tagone);
 LabCaveMediation.INSTANCE.showRewardedVideo(context, tag);
 ```
 You must pass the conext of your activity and a string where the ad will be shown "main-menu", "options"... also can be an empty string.

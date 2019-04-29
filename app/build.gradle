@@ -5,7 +5,7 @@ android {
   buildToolsVersion "27.0.3"
   defaultConfig {
     applicationId "com.labcave.labcavemediation.android.sample"
-    minSdkVersion 16
+    minSdkVersion 17
     targetSdkVersion 27
     versionCode 1
     versionName "1.0"
@@ -34,15 +34,15 @@ dependencies {
   compile 'com.google.android.gms:play-services-base:15.0.1'
   compile 'com.google.android.gms:play-services-ads:15.0.1'
 
-  compile(name: 'labcavemediation-base-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-admob-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-adcolony-noso-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-applovin-fat-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-facebook-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-base-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-admob-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-adcolony-noso-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-applovin-fat-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-facebook-2.6.0', ext: 'aar')
   compile(name: 'AudienceNetwork', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-chartboost-fat-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-inmobi-fat-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-startapp-fat-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-unityads-fat-2.0.1', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-vungle-fat-2.0.1', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-chartboost-fat-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-inmobi-fat-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-startapp-fat-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-unityads-fat-2.6.0', ext: 'aar')
+  compile(name: 'labcavemediation-mediation-vungle-fat-2.6.0', ext: 'aar')
 }

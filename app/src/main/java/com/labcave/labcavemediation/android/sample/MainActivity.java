@@ -14,7 +14,7 @@ import com.labcave.mediationlayer.delegates.LabCaveMediationListener;
 import com.labcave.mediationlayer.mediationadapters.models.Info;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-  private static final String APP_ID = "3475efb80cf7af9cffbecf706d93fad37ffdaeee";
+  private static final String APP_ID = "YOUR_APPHASH";
 
   private LabCaveMediationBannerView bannerView;
   private final Handler UIHandler = new Handler(Looper.getMainLooper());
@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private Button showBanner;
   private Button showInterstitial;
   private Button showRewarded;
-  private Button showVideo;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -34,13 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     showBanner = findViewById(R.id.showBanner);
     showInterstitial = findViewById(R.id.showInterstitial);
     showRewarded = findViewById(R.id.showRewarded);
-    showVideo = findViewById(R.id.showVideo);
-
     showTest.setOnClickListener(this);
     showBanner.setOnClickListener(this);
     showInterstitial.setOnClickListener(this);
     showRewarded.setOnClickListener(this);
-    showVideo.setOnClickListener(this);
 
     initLabcaveMediationLayer();
   }
@@ -67,10 +63,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
               case REWARDED_VIDEO:
                 showRewarded.setVisibility(View.VISIBLE);
-                break;
-
-              case VIDEO:
-                showVideo.setVisibility(View.VISIBLE);
                 break;
             }
           }
@@ -127,10 +119,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
       case R.id.showRewarded:
         LabCaveMediation.INSTANCE.showRewardedVideo(MainActivity.this, "rewarded");
-        break;
-
-      case R.id.showVideo:
-        LabCaveMediation.INSTANCE.showVideo(MainActivity.this, "video");
         break;
     }
   }
