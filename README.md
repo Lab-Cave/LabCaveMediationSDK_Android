@@ -18,7 +18,7 @@ repositories {
 ```
 
 ```java
-compile(name: 'labcavemediation-base-2.6.0', ext: 'aar')
+compile(name: 'labcavemediation-base-2.8.0', ext: 'aar')
 compile 'com.google.android.gms:play-services-base:+'
 ```
 
@@ -34,32 +34,32 @@ dependencies {
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-adcolony-noso-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-adcolony-fat-2.8.0', ext: 'aar')
     compile 'com.google.android.gms:play-services-ads:+'
-}
-
-sourceSets {
-    main {
-      jniLibs.srcDirs = ['libs']
-    }
 }
 ```
 **Admob**
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-admob-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-admob-2.8.0', ext: 'aar')
     compile 'com.google.android.gms:play-services-ads:+'
     compile 'com.google.android.ads.consent:consent-library:1.0.6'
-
 }
 ```
+Add to your manifest file : 
+
+````java
+ <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="YOUR_ADMOB_APPLICATION_ID"/>
+````
 
 **AppLovin**
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-applovin-fat-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-applovin-fat-2.8.0', ext: 'aar')
     compile 'com.google.android.gms:play-services-ads:+'
 }
 ```
@@ -68,7 +68,7 @@ dependencies {
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-chartboost-fat-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-chartboost-fat-2.8.0', ext: 'aar')
     compile 'com.google.android.gms:play-services-ads:+'
 }
 ```
@@ -77,41 +77,23 @@ dependencies {
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-facebook-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-facebook-2.8.0', ext: 'aar')
     compile(name: 'AudienceNetwork', ext: 'aar')
     compile 'com.google.android.gms:play-services-ads:+'
 }
 ```
-
-**InMobi**
-
-```java
-dependencies {
-    compile(name: 'labcavemediation-mediation-inmobi-fat-2.6.0', ext: 'aar')
-    compile "com.android.support:design:+"
-}
-```
-
-**StartApp**
-
-```java
-dependencies {
-     compile(name: 'labcavemediation-mediation-startapp-fat-2.6.0', ext: 'aar')
-}
-```
-
 **UnityAds**
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-unityads-fat-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-unityads-fat-2.8.0', ext: 'aar')
 }
 ```
 **Vungle**
 
 ```java
 dependencies {
-    compile(name: 'labcavemediation-mediation-vungle-fat-2.6.0', ext: 'aar')
+    compile(name: 'labcavemediation-mediation-vungle-fat-2.8.0', ext: 'aar')
     compile 'com.google.android.gms:play-services- ads:+'
 }
 ```
@@ -152,6 +134,18 @@ method:
     LabCaveMediation.INSTANCE.resume();
 }
 ```
+The position TOP or BOTTOM and the size SMART(SCREEN_SIZEx50) or BANNER (320x50) can be setted at the beggining of the execution or when you call "showBanner":
+```java
+LabCaveMediation.INSTANCE.showBanner(context, tag, BannerPosition bannerPosition);
+LabCaveMediation.INSTANCE.showBanner(context, tag, BannerSize bannerSize);
+LabCaveMediation.INSTANCE.showBanner(context, tag, BannerPosition bannerPosition,  BannerSize bannerSize);
+
+LabCaveMediation.INSTANCE.showBanner(labcaveBannerView, tag, BannerPosition bannerPosition);
+LabCaveMediation.INSTANCE.showBanner(labcaveBannerView, tag, BannerSize bannerSize);
+LabCaveMediation.INSTANCE.showBanner(labcaveBannerView, tag, BannerPosition bannerPosition, BannerSize bannerSize);
+LabCave
+
+
 ### Advance integration
 
 The sdk offers a delegate where you can receive the events of the ads. Important the the method "addListener"
@@ -211,25 +205,24 @@ LabCaveMediation.INSTANCE.initTest(this, "YOUR_API_HASH");
 ```
 If you use proguard add these rules:
 
-```java
--keep class com.androidnative.** { *; }
+```groovy
 -keep class com.google.analytics.** { *; }
 -keep class com.google.unity.** { *; }
 -keep class com.google.android.gms.** { *; }
 -keep class com.google.android.ads.** { *; }
--keep class com.vungle.** { *; }
 -keep public class com.labcave.** { *; }
--keep class com.tapdaq.** { *; }
 -keep class com.nerd.** { *; }
+#AdColony
 -keepclassmembers class * { @android.webkit.JavascriptInterface <methods>; }
 -keepclassmembers class com.adcolony.sdk.ADCNative** { *;}
+
 -keep class com.chartboost.** { *; }
--keep class com.oneaudience.** { *; }
 -keepattributes SourceFile,LineNumberTable
 -keepattributes JavascriptInterface
 -keep class android.webkit.JavascriptInterface { *;}
 -keep class com.unity3d.ads.** {*;}
 -keep class com.facebook.** { *; }
+
 -keepclassmembers class com.ironsource.sdk.controller.IronSourceWebView$JSInterface {
     public *;
 }
@@ -241,21 +234,42 @@ If you use proguard add these rules:
 }
 -keep class com.ironsource.adapters.** { *;
 }
--keep class com.startapp.** {
-      *;
-}
-
--keep class com.truenet.** {
-      *;
-}
-
--keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile,LineNumberTable, *Annotation*, EnclosingMethod
--dontwarn android.webkit.JavascriptInterface
--dontwarn com.startapp.**
-
--dontwarn org.jetbrains.annotations.**
+-dontwarn com.ironsource.mediationsdk.**
+-dontwarn com.ironsource.adapters.**
 -dontwarn com.moat.**
 -keep class com.moat.** { public protected private *; }
+
+#UnityAds
+-keepattributes SourceFile,LineNumberTable
+-keepattributes JavascriptInterface
+-keep class android.webkit.JavascriptInterface {*;}
+-keep class com.unity3d.ads.** {*;}
+-keep class com.unity3d.services.** {*;}
+-dontwarn com.google.ar.core.**
+-dontwarn com.unity3d.services.**
+
+#Vungle
+-keep class com.vungle.warren.** { *; }
+-dontwarn com.vungle.warren.error.VungleError$ErrorCode
+# Moat SDK
+-keep class com.moat.** { *; }
+-dontwarn com.moat.**
+# Okio
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+# Retrofit
+-dontwarn okio.**
+-dontwarn retrofit2.Platform$Java8
+# Gson
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn sun.misc.**
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+# Google Android Advertising ID
+-keep class com.google.android.gms.internal.** { *; }
+-dontwarn com.google.android.gms.ads.identifier.**
 ```
 
 ### Example

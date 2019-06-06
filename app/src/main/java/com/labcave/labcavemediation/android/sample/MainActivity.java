@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   }
 
   private void initLabcaveMediationLayer() {
-    LabCaveMediation.INSTANCE.setAutoFetch(true);
     LabCaveMediation.INSTANCE.setLogging(true);
     LabCaveMediation.INSTANCE.addListener(new LabCaveMediationListener() {
       @Override public void onInit(boolean state) {
