@@ -73,6 +73,15 @@ dependencies {
 }
 ```
 
+**Ironsource**
+
+```java
+dependencies {
+    implementation(name: 'labcavemediation-ironsource-chartboost-fat-2.8.0', ext: 'aar')
+    implementation 'com.google.android.gms:play-services-ads:+'
+}
+```
+
 **Facebook**
 
 ```java
