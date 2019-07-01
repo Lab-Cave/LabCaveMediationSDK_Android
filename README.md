@@ -18,7 +18,8 @@ repositories {
 ```
 
 ```java
-implementation(name: 'labcavemediation-base-2.8.0', ext: 'aar')
+implementation(name: 'labcavemediation-base-2.8.1', ext: 'aar')
+implementation fileTree(dir: 'libs/libs', include: ['*.jar'])
 implementation 'com.google.android.gms:play-services-base:+'
 ```
 
@@ -34,7 +35,7 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.8.1', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
@@ -42,7 +43,7 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-admob-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-admob-2.8.1', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:+'
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 }
@@ -59,7 +60,8 @@ Add to your manifest file :
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-applovin-fat-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-applovin-fat-2.8.1', ext: 'aar')
+    implementation(name:'recyclerview-v7', ext:'aar')
     implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
@@ -68,7 +70,7 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.8.1', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
@@ -77,7 +79,7 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-ironsource-chartboost-fat-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-ironsource-chartboost-fat-2.8.1', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
@@ -86,7 +88,7 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-facebook-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-facebook-2.8.1', ext: 'aar')
     implementation(name: 'AudienceNetwork', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:+'
 }
@@ -95,14 +97,14 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-unityads-fat-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-unityads-fat-2.8.1', ext: 'aar')
 }
 ```
 **Vungle**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-vungle-fat-2.8.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-vungle-fat-2.8.1', ext: 'aar')
     implementation 'com.google.android.gms:play-services- ads:+'
 }
 ```
