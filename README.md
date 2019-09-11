@@ -142,12 +142,9 @@ LabCaveMediation.init(this, APP_HASH, AD_FORMAT.REWARDED_VIDEO);
 LabCaveMediation.init(this, APP_HASH);
 ```
 
-
 The appHash is the hash ID of your app, you can get it in https://mediation.labcavegames.com/panel/apps, "context" is your activity context.
 
-When you init the SDK then you can show ads. 
-
-**Important: the mediation SDK auto fetch all ads for you**, when you call the init method also will fecth the first ads, so you only need to call the showMethod. Display ads with the corresponding action according to the ad format desired:
+**Important: The mediation SDK auto fetches all ads for you**, so when you call the init method it will also fetch the first ads. Once the ad is loaded, you only need to call the showMethod. Display ads with the corresponding action according to the ad format:
 
 ```java
 LabCaveMediation.showBanner(context, tag);
@@ -158,9 +155,9 @@ LabCaveMediation.showInterstitial(context, tag);
 LabCaveMediation.showRewardedVideo(context, tag);
 ```
 
-You have to pass the context of your activity and the ad placement where the ad will be shown "double-coins","main-menu", "options", etc. It can also be an empty string but we recommend you to always define an ad placement. 
+You have to pass the context of your activity and the ad placement where the ad will be shown. For example you can use placements like "double-coins","main-menu" or "options". It can also be an empty string but we recommend you to always define an ad placement. 
 
-**The ad placements are automatically created on the dashboard and will appear after the first call of that specific ad placement is done.**
+**The ad placements are automatically created on the dashboard and will appear after the first call of that specific ad placement is done. It might take some time for the placement to be created.**
 
 
 If Banner ads are used, it is recommended to pause/resume ads with the onPause/onResume
@@ -192,7 +189,9 @@ LabCaveMediation.showBanner(labcaveBannerView, tag, BannerPosition bannerPositio
 
 ### Advance integration
 
-The SDK offers a delegate where you can receive the events of the ads. **Important** the method "addListener" add a new listener, so make sure you **do not add the same listener more than once.** 
+The SDK offers a delegate where you can receive the events of the ads. 
+
+>**Important:** the method "addListener" adds a new listener, so make sure you **do not add the same listener more than once.** 
 
 The SDK will call all the listener added. You can remove a listener or all listeners added.
 
