@@ -115,7 +115,7 @@ dependencies {
 
 Once you have added all the files and the configuration to your build .gradle, it's time to initialize the SDK. 
 
-**Important**: you have to initialize the SDK at the begining of the execution of your app. Make sure you **initiliase it only once**.
+>**Important**: you have to initialize the SDK at the begining of the execution of your app. Make sure you **initiliase it only once**.
 
 The SDK Initialisation can be done in two ways:
 
@@ -144,7 +144,7 @@ LabCaveMediation.init(this, APP_HASH);
 
 The appHash is the hash ID of your app, you can get it in https://mediation.labcavegames.com/panel/apps, "context" is your activity context.
 
-**Important: The mediation SDK auto fetches all ads for you**, so when you call the init method it will also fetch the first ads. Once the ad is loaded, you only need to call the showMethod. Display ads with the corresponding action according to the ad format:
+>**Important: The mediation SDK auto fetches all ads for you**, so when you call the init method it will also fetch the first ads. Once the ad is loaded, you only need to call the showMethod. Display ads with the corresponding action according to the ad format:
 
 ```java
 LabCaveMediation.showBanner(context, tag);
@@ -157,7 +157,7 @@ LabCaveMediation.showRewardedVideo(context, tag);
 
 You have to pass the context of your activity and the ad placement where the ad will be shown. For example you can use placements like "double-coins","main-menu" or "options". It can also be an empty string but we recommend you to always define an ad placement. 
 
-**The ad placements are automatically created on the dashboard and will appear after the first call of that specific ad placement is done. It might take some time for the placement to be created.**
+>**The ad placements are automatically created on the dashboard and will appear after the first call of that specific ad placement is done. It might take some time for the placement to be created.**
 
 
 If Banner ads are used, it is recommended to pause/resume ads with the onPause/onResume
