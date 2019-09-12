@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
     bannerView = findViewById(R.id.banner);
-
     Button showTest = findViewById(R.id.showTest);
     showBanner = findViewById(R.id.showBanner);
     showInterstitial = findViewById(R.id.showInterstitial);
@@ -37,13 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     showBanner.setOnClickListener(this);
     showInterstitial.setOnClickListener(this);
     showRewarded.setOnClickListener(this);
-
     initLabcaveMediationLayer();
   }
 
   private void initLabcaveMediationLayer() {
-    LabCaveMediation.INSTANCE.setLogging(true);
-    LabCaveMediation.INSTANCE.addListener(new LabCaveMediationListener() {
+    LabCaveMediation.setLogging(true);
+    LabCaveMediation.addListener(new LabCaveMediationListener() {
       @Override public void onInit(boolean state) {
 
       }
@@ -89,35 +86,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
     });
 
-    LabCaveMediation.INSTANCE.init(this, APP_ID);
+    LabCaveMediation.init(this, APP_ID);
   }
 
   @Override protected void onPause() {
     super.onPause();
-    LabCaveMediation.INSTANCE.pause();
+    LabCaveMediation.pause();
   }
 
   @Override protected void onResume() {
     super.onResume();
-    LabCaveMediation.INSTANCE.resume();
+    LabCaveMediation.resume();
   }
 
   @Override public void onClick(View v) {
     switch (v.getId()) {
       case R.id.showTest:
-        LabCaveMediation.INSTANCE.initTest(this, APP_ID);
+        LabCaveMediation.initTest(this, APP_ID);
         break;
 
       case R.id.showBanner:
-        LabCaveMediation.INSTANCE.showBanner(bannerView, "banner");
+        LabCaveMediation.showBanner(bannerView, "banner");
         break;
 
       case R.id.showInterstitial:
-        LabCaveMediation.INSTANCE.showInterstitial(MainActivity.this, "inter");
+        LabCaveMediation.showInterstitial(MainActivity.this, "inter");
         break;
 
       case R.id.showRewarded:
-        LabCaveMediation.INSTANCE.showRewardedVideo(MainActivity.this, "rewarded");
+        LabCaveMediation.showRewardedVideo(MainActivity.this, "rewarded");
         break;
     }
   }

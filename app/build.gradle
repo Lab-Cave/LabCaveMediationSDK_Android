@@ -22,19 +22,19 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:multidex:1.0.2'
-  compile 'com.android.support:appcompat-v7:27.1.0'
-  compile 'com.google.android.gms:play-services-base:15.0.1'
-  compile 'com.google.android.gms:play-services-ads:15.0.1'
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'com.android.support:multidex:1.0.3'
+  implementation 'com.android.support:appcompat-v7:27.1.1'
+  implementation 'com.google.android.gms:play-services-base:17.1.0'
+  implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
-  compile(name: 'labcavemediation-base-2.8.0', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-admob-2.8.0', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-adcolony-fat-2.8.0', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-applovin-fat-2.8.0', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-facebook-2.8.0', ext: 'aar')
-  compile(name: 'AudienceNetwork', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-chartboost-fat-2.8.0', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-unityads-fat-2.8.0', ext: 'aar')
-  compile(name: 'labcavemediation-mediation-vungle-fat-2.8.0', ext: 'aar')
+  implementation(name: 'labcavemediation-base-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-admob-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-adcolony-fat-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-applovin-fat-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-facebook-2.9.1', ext: 'aar')
+  implementation(name: 'AudienceNetwork', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-chartboost-fat-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-unityads-fat-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-vungle-fat-2.9.1', ext: 'aar')
 }
