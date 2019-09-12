@@ -2,36 +2,40 @@ LabCave Mediation Android SDK
 =====
 The current version has been tested using API 21, 23, 25 and 26 and require a minSdkVersion >= 17
 
-## Download SDK
 
-Download our SDK, unzip the file and add all files in lib folder to your project's lib folder. Then add these lines to your build.gradle:
 
-### Importing to your project
-**Add to build.gradle:**
+## Adding Lab Cave Mediation SDK to your Project
 
-```java
-repositories {
-  flatDir {
-    dirs 'libs'
-  }
-} 
-```
+1. Download our SDK, unzip the file and add all files in lib folder to your project's lib folder. 
+
+2. Then add these lines to your build.gradle:
 
 ```java
-implementation(name: 'labcavemediation-base-2.9.1', ext: 'aar')
-implementation fileTree(dir: 'libs/libs', include: ['*.jar'])
-implementation 'com.google.android.gms:play-services-base:+'
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    } 
+    
+    dependecies{
+        implementation(name: 'labcavemediation-base-2.9.1', ext: 'aar')
+        implementation fileTree(dir: 'libs/libs', include: ['*.jar'])
+        implementation 'com.google.android.gms:play-services-base:+'
+    }
 ```
 
-**Recommended:**
+**We also recommend adding the following lines:**
 
 ```java
 dependencies {
-    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'com.android.support:multidex:1.0.3'
 }
 ```
+### Integrate Lab Cave Mediation Network Adapters
 
-**Make sure you add the following depending on your selected Ad Networks**
+Lab Cave Mediation supports Banners, Interstitials and Video Rewarded from various leading ad networks, with advanced functionalities like ads auto-fetching and advanced delivery optimization.
+
+Make sure you add the following depending on your selected Ad Networks
 
 **AdColony**
 
@@ -111,12 +115,13 @@ dependencies {
 }
 ```
 
-## Integrate SDK
+## Initialize the SDK
 
 Once you have added all the files and the configuration to your build .gradle, it's time to initialize the SDK. 
 
->**Important**: you have to initialize the SDK at the begining of the execution of your app. Make sure you **initiliase it only once**.
+**Important**: you have to initialize the SDK at the begining of the execution of your app. Make sure you **initiliase it only once**.
 
+### Init the SDK
 The SDK Initialisation can be done in two ways:
 
 1. Initialize each Ad Format separately at different points of the game. ***Recommended*** to minimise the number of ads preloaded without showing an impression.
@@ -144,23 +149,9 @@ LabCaveMediation.init(this, APP_HASH);
 
 The appHash is the hash ID of your app, you can get it in https://mediation.labcavegames.com/panel/apps, "context" is your activity context.
 
->**Important: The mediation SDK auto fetches all ads for you**, so when you call the init method it will also fetch the first ads. Once the ad is loaded, you only need to call the showMethod. Display ads with the corresponding action according to the ad format:
+## Override Activity Lifecycle Methods
 
-```java
-LabCaveMediation.showBanner(context, tag);
-LabCaveMediation.showBanner(labcaveBannerView, tag);
-
-LabCaveMediation.showInterstitial(context, tag);
-
-LabCaveMediation.showRewardedVideo(context, tag);
-```
-
-You have to pass the context of your activity and the ad placement where the ad will be shown. For example you can use placements like "double-coins","main-menu" or "options". It can also be an empty string but we recommend you to always define an ad placement. 
-
->**The ad placements are automatically created on the dashboard and will appear after the first call of that specific ad placement is done. It might take some time for the placement to be created.**
-
-
-If Banner ads are used, it is recommended to pause/resume ads with the onPause/onResume
+It is recommended to pause/resume ads with the onPause/onResume
 method:
 
 ```java
@@ -174,26 +165,12 @@ method:
     LabCaveMediation.resume();
 }
 ```
-The position **TOP** or **BOTTOM** and the size SMART(SCREEN_SIZEx50) or BANNER (320x50) can be set at the beggining of the execution or when you call "showBanner":
 
-```java
-LabCaveMediation.showBanner(context, tag, BannerPosition bannerPosition);
-LabCaveMediation.showBanner(context, tag, BannerSize bannerSize);
-LabCaveMediation.showBanner(context, tag, BannerPosition bannerPosition,  BannerSize bannerSize);
+## Set Listeners
 
-LabCaveMediation.showBanner(labcaveBannerView, tag, BannerPosition bannerPosition);
-LabCaveMediation.showBanner(labcaveBannerView, tag, BannerSize bannerSize);
-LabCaveMediation.showBanner(labcaveBannerView, tag, BannerPosition bannerPosition, BannerSize bannerSize);
-```
+The SDK offers a listener where you can receive the events of the ads. **Important** the method "addListener" add a new listener, so make sure you **do not add the same listener more than once.** 
 
-
-### Advance integration
-
-The SDK offers a delegate where you can receive the events of the ads. 
-
->**Important:** the method "addListener" adds a new listener, so make sure you **do not add the same listener more than once.** 
-
-The SDK will call all the listener added. You can remove a listener or all listeners added.
+The SDK will call all the listeners added. You can remove any listener you want to.
 
 ```java
 
@@ -232,6 +209,80 @@ The SDK will call all the listener added. You can remove a listener or all liste
       }
     });
 ```
+## Showing Ads
+
+
+Once you have correctly initialize the SDK and set the listeners, then you can show ads. 
+
+>**The mediation SDK auto fetch all ads for you**, when you call the init method also will fecth the first ads, so you only need to call the show methods for the selected ad format.
+
+You have to pass the context of your activity and the ad placement where the ad will be shown "double-coins", "main-menu", "options", etc. It can also be an empty string but we recommend you to always define an ad placement. 
+
+**The ad placements are automatically created on the dashboard and will appear after the first call of that specific ad placement is done.**
+
+Make sure you check that the ad has been correctly loaded by calling the following method, passing the correct mediationType:
+```java
+LabCaveMediation.isAdTypeLoaded(MediationType mediationType);
+
+MediationType.INTERSTITIAL
+MediationType.REWARDED_VIDEO
+MediationType.BANNER
+```
+
+## Interstitial
+
+```java
+if (LabCaveMediation.isAdTypeLoaded(MediationType.INTERSTITIAL){
+    LabCaveMediation.showInterstitial(context, tag);
+}
+```
+
+## Rewarded Video
+
+```java
+if (LabCaveMediation.isAdTypeLoaded(MediationType.REWARDED_VIDEO){
+    LabCaveMediation.showRewardedVideo(context, tag);
+}
+
+```
+
+## Banner
+
+The position **TOP** or **BOTTOM** and the size SMART(SCREEN_SIZEx50) or BANNER (320x50) can be set at the beggining of the execution or when you call "showBanner":
+
+```java
+if (LabCaveMediation.isAdTypeLoaded(MediationType.BANNER))
+{
+    ...
+}
+
+LabCaveMediation.showBanner(context, tag, BannerPosition bannerPosition);
+LabCaveMediation.showBanner(context, tag, BannerSize bannerSize);
+LabCaveMediation.showBanner(context, tag, BannerPosition bannerPosition,  BannerSize bannerSize);
+
+LabCaveMediation.showBanner(labcaveBannerView, tag, BannerPosition bannerPosition);
+LabCaveMediation.showBanner(labcaveBannerView, tag, BannerSize bannerSize);
+LabCaveMediation.showBanner(labcaveBannerView, tag, BannerPosition bannerPosition, BannerSize bannerSize);
+```
+### Verify the integration
+
+In order to check if the SDK is correct, open the test module, you have to call the "Init" method first and wait till the "onInit" listener method is called:
+
+```java
+LabCaveMediation.initTest(this, "YOUR_API_HASH");
+```
+>**Make sure you remove this test module on your release build.**
+
+## Sample Activity
+
+You can find here an example of an activity integrating Lab Cave Mediation
+
+[Sample](./app/src/main/java/com/labcave/labcavemediation/android/sample/MainActivity.java)
+
+## Advance integration
+
+
+### Debugging
 
 You can enable logging to get additional information by using the following method:
 
@@ -239,14 +290,17 @@ You can enable logging to get additional information by using the following meth
 LabCaveMediation.setLogging(true);
 ```
 
-In order to check if the integration of each thirdparty is correct, open the test module, you have to call the "Init" method first and wait till the "onInit" delegate method is called:
+### GDPR
+
+You can set the user consent to the sdk if you manage it. If you don't, the mediation will ask the user for the consent. You can use the following methods:
 
 ```java
-LabCaveMediation.initTest(this, "YOUR_API_HASH");
+LabCaveMediation.setUserConsent(this, false);
+
+LabCaveMediation.getUserConsent();
 ```
 
->**Make sure you remove this test module on your release build.**
-
+### Proguard
 If you use proguard add these rules:
 
 ```groovy
@@ -316,6 +370,4 @@ If you use proguard add these rules:
 -dontwarn com.google.android.gms.ads.identifier.**
 ```
 
-### Example
 
-[Sample](./app/src/main/java/com/labcave/labcavemediation/android/sample/MainActivity.java)
