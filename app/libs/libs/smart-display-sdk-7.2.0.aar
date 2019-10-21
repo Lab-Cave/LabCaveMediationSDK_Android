@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Package smart-display-sdk-7.2.0.aar is hosted on packagecloud. Create an account to upload your own packages."><meta property="og:site_name" content="Packagecloud"><meta property="og:type" content="website"><meta property="og:description" content="Package smart-display-sdk-7.2.0.aar is hosted on packagecloud. Create an account to upload your own packages."><meta property="og:image" content="https://gravatar.com/avatar/79ecc8f9cd13916e80188692b7ee42ad.png?s=1200&amp;d=retro"><meta property="og:title" content="maven2/smart-display-sdk-7.2.0.aar - smartadserver/android · packagecloud">
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","description":"Package smart-display-sdk-7.2.0.aar is hosted on packagecloud. Create an account to upload your own packages."}</script>
+
+<title>maven2/smart-display-sdk-7.2.0.aar - smartadserver/android · packagecloud</title>
+
+
+      <meta name="google-site-verification" content="Zkz-4-7DH8kEHMP8bYMX6aCY-8p_f-rI_poBzSWKrFc" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="sPfsxWhHdyOxNujU2X8lDI9wMQlJoH+gCCeiZcABElANjYyBZgczq9+NEEVLzqJzTZ60k/nlll9SjfppNukjLw==" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets-production.packagecloud.io/assets/packs/_/assets/images/favicon-50091bcb5eaba1f5ea2ece7b30e0b074.ico">
+
+    <link rel="stylesheet" media="all" href="https://assets-production.packagecloud.io/assets/packs/package-460c19156c9ac3f970e868c73cc8e58e.css" />
+
+    
+
+    <style type="text/css" media="screen">
+      /* We need this to block out the FOUC from loading the angular app at the */
+      /* bottom the document. More here https://docs.angularjs.org/api/ng/directive/ngCloak */
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>
+    <script>
+      /* Include polyfills for older browsers -- Only checking for Symbol */
+       var modernBrowser = (
+         'Symbol' in window
+       );
+
+       if ( !modernBrowser ) {
+         var scriptElement = document.createElement('script');
+         scriptElement.async = false;
+         scriptElement.src = 'https://assets-production.packagecloud.io/assets/packs/polyfills-26c0bfac53355a9fff57.js';
+         document.head.appendChild(scriptElement);
+       }
+     </script>
+  </head>
+  <body id="" class=" logged-out" ng-app="packagecloud">
+
+    <nav class="navigation fixed sidenav">
+  <div class="navigation-wrapper">
+    <a class="logo" href="/" title="Home">
+      <span class="glyphicon glyphicon-cloud"></span>
+      <span class="glyphicon glyphicon-cloud small"></span>
+    </a>
+    <ul class="icons">
+    <li class="more "><a href="javascript:;"><span class="glyphicon glyphicon-list-alt"></span><div class="sub-text">Docs</div></a>
+      <ul class="submenu">
+        <li><a href="/docs">General Docs</a></li>
+        <li><a href="/docs/api">API Docs</a></li>
+        <li><a target="parent" href="http://www.rubydoc.info/gems/package_cloud/">CLI Docs</a></li>
+        <li><a href="/docs/security">Security Information</a></li>
+      </ul>
+    </li>
+    <li><a href="mailto:support@packagecloud.io"><span class="glyphicon glyphicon-bullhorn"></span><div class="sub-text">Help</div></a></li>
+      <li>
+        <a href="/l/cli">
+          <span class="glyphicon glyphicon-terminal"></span>
+          <div class="sub-text">
+            CLI
+          </div>
+</a>      </li>
+    </ul>
+  </div>
+</nav>
+
+      <div id="contextual-sidebar" class="sidebar-container" contextual-sidebar>
+    <div class="sidebar-button-container">
+      <button class="btn primary"
+              ng-click="toggleMenu(model.opened)">
+        <span class="glyphicon"
+              ng-class="{'glyphicon-remove-circle': model.opened, 'glyphicon-list': !model.opened}"></span>
+      </button>
+    </div>
+    <div class="avatar-container">
+    <a href="/smartadserver">
+      <img class="avatar" width="136px" height="136px" src="https://gravatar.com/avatar/79ecc8f9cd13916e80188692b7ee42ad.png?s=272&amp;d=retro" />
+</a>  <div class="user-name">
+    <a href="/smartadserver">smartadserver</a>
+  </div>
+</div>
+
+    <a class="btn primary" href="/smartadserver/android">
+<div class="repo-name-with-icon">
+  <span class="glyphicon glyphicon-globe" title="Public"></span>
+  <span class="repo-name">
+    android
+  </span>
+</div>
+</a><nav class="repo-page-sidebar">
+  <ul class="sidenav">
+    <li><a href="/smartadserver/android"><span class="glyphicon glyphicon-file"></span>Packages</a></li>
+    <li><a href="/smartadserver/android/install"><span class="glyphicon glyphicon-download"></span>Installation</a></li>
+    <li class=><a href="/app/smartadserver/android/search"><span class="glyphicon glyphicon-search"></span>Search</a></li>
+    <li><a href="/smartadserver/android/mirror"><span class="glyphicon glyphicon-duplicate"></span>Mirroring</a></li>
+    <li><a href="/app/smartadserver/android/gpg"><span class="glyphicon glyphicon-lock"></span>GPG</a></li>
+    <li class=><a href="/app/smartadserver/android/stats"><span class="glyphicon glyphicon-stats"></span>Stats</a></li>
+  </ul>
+</nav>
+
+  </div>
+
+
+    <main class="main-content fixed-header">
+      <div class="top-nav">
+  <ul class="logged-out-links">
+    <li><a class="btn primary" href="/users/new">Sign up</a></li>
+    <li><a class="btn primary outline" href="/session/new">Login</a></li>
+  </ul>
+</div>
+
+      
+      <article class="package-page-details-container row"
+        ng-controller="ShowPackageDetailsCtrl"
+        ng-init="init('smartadserver/android', false, false, [{&quot;date&quot;:&quot;Uploaded 2019-09-12&quot;,&quot;value&quot;:0},{&quot;date&quot;:&quot;2019-09-08 to 2019-09-15&quot;,&quot;value&quot;:33},{&quot;date&quot;:&quot;2019-09-15 to 2019-09-22&quot;,&quot;value&quot;:83},{&quot;date&quot;:&quot;2019-09-22 to 2019-09-29&quot;,&quot;value&quot;:67}], 183, 'b889bd3a41aa6b80e0595dd7162b1cceb0cc3e78a9eeb091', 'java', true)">
+  <div class="package-info-details col-md-12">
+    <div class="breadcrumbs">
+      <div class="package-path">
+        <span class="glyphicon glyphicon-globe" title="Public"></span>
+        <span><a class="username" href="/smartadserver">smartadserver</a> / <a class="reponame" href="/smartadserver/android">android</a></span>
+        <span class="distro_version"> / java / com.smartadserver.android</span>
+        <span class="file_name"
+              ng-class="{'fadeout': hideFilenameBreadcrumb, 'fadein': !hideFilenameBreadcrumb}" ng-cloak> / smart-display-sdk-7.2.0.aar</span>
+      </div>
+      <div class="package-actions-container hide-mobile" ng-cloak>
+      </div>
+    </div>
+    <div class="main-package-details">
+      <div class="col-md-8 pkg-title-container">
+        <h1 title="smart-display-sdk-7.2.0.aar">
+  smart-display-sdk-7.2.0.aar
+</h1>
+
+        
+              <div class="java-install-tabs vertical-tabs-container">
+  <div class="col-md-2 vertical-tabs">
+      <a href="javascript:;" class="js-vertical-tab vertical-tab is-active" rel="maven">maven</a>
+      <a href="javascript:;" class="js-vertical-tab vertical-tab" rel="gradle">gradle</a>
+  </div>
+
+  <div class="col-md-10 vertical-tab-content-container">
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="maven">maven</a>
+    <div id="maven" class="js-vertical-tab-content vertical-tab-content">
+      <div class="button-container">
+        <div class="modal-container" ng-controller="GenericModalCtrl">
+
+  <label id="maven_instructions_modal" class="instructions-callout btn outline primary" for="maven-modal">Maven Repository Install Instructions</label>
+
+  <modal modal-title="Using Maven with Packagecloud" visible="showModal" name="maven-modal">
+    <h3>Add the repository to Maven</h3>
+
+  <p>Add this to the top level of your <code>pom.xml</code></p>
+  <!--googleoff: all--><pre id="maven-instructions">
+&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;smartadserver-android&lt;/id&gt;
+    &lt;url&gt;https://packagecloud.io/smartadserver/android/maven2&lt;/url&gt;
+    &lt;releases&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;/releases&gt;
+    &lt;snapshots&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;/snapshots&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+</pre><!--googleon: all-->
+
+
+  </modal>
+</div>
+
+      </div>
+      <!--googleoff: all--><pre id="maven-coords" class="maven-install-script copy-button" data-clipboard-target="#maven-coords">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.smartadserver.android&lt;/groupId&gt;
+  &lt;artifactId&gt;smart-display-sdk&lt;/artifactId&gt;
+  &lt;version&gt;7.2.0&lt;/version&gt;
+  &lt;packaging&gt;aar&lt;/packaging&gt;
+&lt;/dependency&gt;
+</pre><!--googleon: all-->
+
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="lein">leiningen</a>
+    <div id="lein" class="js-vertical-tab-content vertical-tab-content">
+      <div class="button-container">
+        <div class="modal-container" ng-controller="GenericModalCtrl">
+
+  <label id="lein_instructions_modal" class="instructions-callout btn outline primary" for="lein-modal">Leiningen Repository Install Instructions</label>
+
+  <modal modal-title="Using Leiningen with Packagecloud" visible="showModal" name="lein-modal">
+    <h3>Add the repository to Leiningen</h3>
+
+  <p>Add this entry to the top-level of your <code>project.clj</code> file</p>
+  <!--googleoff: all--><pre id="lein-instructions">
+:repositories [[&quot;snapshots&quot; &quot;https://packagecloud.io/smartadserver/android/maven2&quot;]
+               [&quot;releases&quot; &quot;https://packagecloud.io/smartadserver/android/maven2&quot;]]
+</pre><!--googleon: all-->
+
+
+  </modal>
+</div>
+
+      </div>
+      <!--googleoff: all--><pre id="lein-coords" class="leiningen-install-script copy-button" data-clipboard-target="#lein-coords">
+[com.smartadserver.android/smart-display-sdk &quot;7.2.0&quot;]
+</pre><!--googleon: all-->
+
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="ivy">ivy</a>
+    <div id="ivy" class="js-vertical-tab-content vertical-tab-content">
+      <div class="button-container">
+        <div class="modal-container" ng-controller="GenericModalCtrl">
+
+  <label id="ivy_instructions_modal" class="instructions-callout btn outline primary" for="ivy-modal">Ivy Repository Install Instructions</label>
+
+  <modal modal-title="Using Ivy with Packagecloud" visible="showModal" name="ivy-modal">
+    <h3>Add the repository to Ivy</h3>
+
+  <p>Create an <code>ivysettings.xml</code> file</p>
+  <!--googleoff: all--><pre id="ivy-instructions">
+&lt;ivysettings&gt;
+    &lt;settings defaultResolver=&quot;chain&quot;/&gt;
+    &lt;resolvers&gt;
+        &lt;chain name=&quot;chain&quot;&gt;
+            &lt;ibiblio name=&quot;central&quot; m2compatible=&quot;true&quot;/&gt;
+            &lt;ibiblio name=&quot;smartadserver-android&quot; m2compatible=&quot;true&quot; root=&quot;https://packagecloud.io/smartadserver/android/maven2&quot;/&gt;
+        &lt;/chain&gt;
+    &lt;/resolvers&gt;
+&lt;/ivysettings&gt;
+</pre><!--googleon: all-->
+
+
+  </modal>
+</div>
+
+      </div>
+      <!--googleoff: all--><pre id="ivy-coords" class="ivy-install-script copy-button" data-clipboard-target="#ivy-coords">
+&lt;dependency org=&quot;com.smartadserver.android&quot; name=&quot;smart-display-sdk&quot; rev=&quot;7.2.0&quot; /&gt;
+</pre><!--googleon: all-->
+
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sbt">sbt</a>
+    <div id="sbt" class="js-vertical-tab-content vertical-tab-content">
+      <div class="button-container">
+        <div class="modal-container" ng-controller="GenericModalCtrl">
+
+  <label id="sbt_instructions_modal" class="instructions-callout btn outline primary" for="sbt-modal">SBT Repository Install Instructions</label>
+
+  <modal modal-title="Using SBT with Packagecloud" visible="showModal" name="sbt-modal">
+    <h3>Add the repository to SBT</h3>
+
+<p>For SNAPSHOT support (needs SBT 0.13.8 or above), create or append the following to a <code>project/maven.sbt</code> file in your project:</p>
+<!--googleoff: all--><pre id="add-resolver">addMavenResolverPlugin</pre><!--googleon: all-->
+  <p>Then, add this entry anywhere in your <code>build.sbt</code> file:</p>
+  <!--googleoff: all--><pre id="sbt-instructions">
+resolvers += &quot;smartadserver-android&quot; at &quot;https://packagecloud.io/smartadserver/android/maven2&quot;
+</pre><!--googleon: all-->
+
+
+  </modal>
+</div>
+
+      </div>
+      <!--googleoff: all--><pre id="sbt-coords" class="sbt-install-script copy-button" data-clipboard-target="#sbt-coords">
+libraryDependencies += &quot;com.smartadserver.android&quot; % &quot;smart-display-sdk&quot; % &quot;7.2.0&quot;
+</pre><!--googleon: all-->
+
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="gradle">gradle</a>
+    <div id="gradle" class="js-vertical-tab-content vertical-tab-content">
+      <div class="button-container">
+        <div class="modal-container" ng-controller="GenericModalCtrl">
+
+  <label id="gradle_instructions_modal" class="instructions-callout btn outline primary" for="gradle-modal">Gradle Repository Install Instructions</label>
+
+  <modal modal-title="Using Gradle with Packagecloud" visible="showModal" name="gradle-modal">
+    <h3>Add the repository to Gradle</h3>
+
+  <p>Add this entry anywhere in your <code>build.gradle</code> file</p>
+  <!--googleoff: all--><pre id="gradle-instructions">
+repositories {
+    maven {
+        url &quot;https://packagecloud.io/smartadserver/android/maven2&quot;
+    }
+}
+</pre><!--googleon: all-->
+
+
+  </modal>
+</div>
+
+      </div>
+      <!--googleoff: all--><pre id="gradle-coords" class="gradle-install-script copy-button" data-clipboard-target="#gradle-coords">
+compile &#39;com.smartadserver.android:smart-display-sdk:7.2.0@aar&#39;
+</pre><!--googleon: all-->
+
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="grape">grape</a>
+    <div id="grape" class="js-vertical-tab-content vertical-tab-content">
+      <div class="button-container">
+        <div class="modal-container" ng-controller="GenericModalCtrl">
+
+  <label id="grape_instructions_modal" class="instructions-callout btn outline primary" for="grape-modal">Grape Repository Install Instructions</label>
+
+  <modal modal-title="Using Grape with Packagecloud" visible="showModal" name="grape-modal">
+    <h3>Add the repository to Grape</h3>
+
+  <p>Create a <code>~/.groovy/grapeConfig.xml</code> file</p>
+  <!--googleoff: all--><pre id="grape-instructions">
+&lt;ivysettings&gt;
+  &lt;settings defaultResolver=&quot;downloadGrapes&quot;/&gt;
+  &lt;resolvers&gt;
+    &lt;chain name=&quot;downloadGrapes&quot; returnFirst=&quot;true&quot;&gt;
+      &lt;filesystem name=&quot;cachedGrapes&quot;&gt;
+        &lt;ivy pattern=&quot;${user.home}/.groovy/grapes/[organisation]/[module]/ivy-[revision].xml&quot;/&gt;
+        &lt;artifact pattern=&quot;${user.home}/.groovy/grapes/[organisation]/[module]/[type]s/[artifact]-[revision](-[classifier]).[ext]&quot;/&gt;
+      &lt;/filesystem&gt;
+      &lt;ibiblio name=&quot;localm2&quot; root=&quot;file:${user.home}/.m2/repository/&quot; checkmodified=&quot;true&quot; changingPattern=&quot;.*&quot; changingMatcher=&quot;regexp&quot; m2compatible=&quot;true&quot;/&gt;
+      &lt;!-- todo add &#39;endorsed groovy extensions&#39; resolver here --&gt;
+      &lt;ibiblio name=&quot;smartadserver-android&quot; root=&quot;https://packagecloud.io/smartadserver/android/maven2&quot; m2compatible=&quot;true&quot;/&gt;
+      &lt;ibiblio name=&quot;ibiblio&quot; m2compatible=&quot;true&quot;/&gt;
+    &lt;/chain&gt;
+  &lt;/resolvers&gt;
+&lt;/ivysettings&gt;
+</pre><!--googleon: all-->
+
+
+  </modal>
+</div>
+
+      </div>
+      <!--googleoff: all--><pre id="grape-coords" class="grape-install-script copy-button" data-clipboard-target="#grape-coords">
+@Grapes(
+@Grab(group=&#39;com.smartadserver.android&#39;, module=&#39;smart-display-sdk&#39;, version=&#39;7.2.0&#39;)
+)
+</pre><!--googleon: all-->
+
+    </div>
+  </div>
+</div>
+
+    <div class="bordered-info">
+  <h3>POMs</h3>
+  <table class="table-minimal">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th class="hide-mobile">MD5</th>
+        <th class="hide-mobile">SHA1</th>
+        <th>Size</th>
+        <th class="hide-mobile">Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="/smartadserver/android/packages/java/com.smartadserver.android/smart-display-sdk-7.2.0.aar/artifacts/smart-display-sdk-7.2.0.pom">smart-display-sdk-7.2.0.pom</a></td>
+        <td class="hide-mobile wb-bw">3e100f7c652585278c0872566d5deba7</td>
+        <td class="hide-mobile wb-bw">1b5853a0e7c4c0cfe6b507c844106b5dd176f22d</td>
+        <td>1.94 KB</td>
+        <td class="hide-mobile download-link"><a class="glyphicon glyphicon-download-alt" href="https://packagecloud.io/smartadserver/android/packages/java/com.smartadserver.android/smart-display-sdk-7.2.0.aar/artifacts/smart-display-sdk-7.2.0.pom/download"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+  
+    <div class="bordered-info">
+  <h3>AARs</h3>
+  <table class="table-minimal">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>MD5</th>
+        <th>SHA1</th>
+        <th>Size</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="/smartadserver/android/packages/java/com.smartadserver.android/smart-display-sdk-7.2.0.aar/artifacts/smart-display-sdk-7.2.0.aar">smart-display-sdk-7.2.0.aar</a></td>
+        <td class="wb-bw">82802182f664fdf859c8752399ab89dd</td>
+        <td class="wb-bw">150e2f4e4c80342ae0974af4a405234c839facac</td>
+        <td>647 KB</td>
+        <td class="download-link"><a class="glyphicon glyphicon-download-alt" href="https://packagecloud.io/smartadserver/android/packages/java/com.smartadserver.android/smart-display-sdk-7.2.0.aar/artifacts/smart-display-sdk-7.2.0.aar/download"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+  
+  
+    <div class="bordered-info">
+  <h3>Dependencies</h3>
+  <table class="table-minimal">
+    <thead>
+      <tr>
+        <th>Group</th>
+        <th>Artifact</th>
+        <th>Version</th>
+        <th>Scope</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>com.smartadserver.android</td>
+        <td>smart-core-sdk</td>
+        <td>7.2.0</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.android.support</td>
+        <td>multidex</td>
+        <td>1.0.2</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.google.android.gms</td>
+        <td>play-services-ads-identifier</td>
+        <td>16.0.0</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.android.support</td>
+        <td>support-v4</td>
+        <td>28.0.0</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.android.support</td>
+        <td>customtabs</td>
+        <td>28.0.0</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.google.android.gms</td>
+        <td>play-services-location</td>
+        <td>16.0.0</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.squareup.okhttp3</td>
+        <td>okhttp</td>
+        <td>3.12.0</td>
+        <td>compile</td>
+      </tr>
+      <tr>
+        <td>com.google.android.exoplayer</td>
+        <td>exoplayer</td>
+        <td>2.8.3</td>
+        <td>compile</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+        <section class="package-details">
+
+
+
+
+        </section>
+      </div>
+      <article class="col-md-4 extra-details">
+          
+          <section class="install-info-container">
+  <h4>Uploaded</h4>
+  <span class="outline-badge size" title="2019-09-12 12:09:08 UTC">13 days ago</span>
+</section>
+<section class="install-info-container flex">
+  <div class="flex-1">
+    <h4>Package Size</h4>
+    <span class="outline-badge size">647 KB</span>
+  </div>
+</section>
+
+          
+          <section class="download-stats-container pb-0" ng-hide="!showStats" ng-cloak>
+  <h4><span class="weekly-text">Downloads</span></h4>
+  <div class="flex p-r">
+    <div class="flex-auto pr-1">
+      <p class="outline-badge size dl-total" data-total="183">183</p>
+    </div>
+    <svg class="sparkline flex-none p-a b-0 r-0" width="220" height="44" stroke-width="3"></svg>
+  </div>
+</section>
+
+          <section class="wget-container">
+  <h4>wget</h4>
+  <pre id="wget-copy"
+       data-clipboard-target="#wget-copy"
+       class="copy-button to-e us-a wb-bw ws-pw">wget --content-disposition https://packagecloud.io/smartadserver/android/packages/java/com.smartadserver.android/smart-display-sdk-7.2.0.aar/artifacts/smart-display-sdk-7.2.0.aar/download</pre>
+</section>
+
+          
+          
+          
+          
+      </article>
+    </div>
+  </div>
+</article>
+
+    </main>
+
+    <script type="text/javascript">
+var PackageCloud = {
+  publishable_stripe_key: 'pk_live_XFXh9vEw0BpmMZb13wMgNAXI',
+  google_maps_api_token: ''
+};
+</script>
+
+    <script type="text/javascript">
+window.AirbrakeConfig = {
+  project_id: '115046',
+  api_key: '11d8ef0c2920804eff345294fbf1667f',
+  environment: 'production'
+};
+</script>
+
+    <script type="application/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49973003-1', 'packagecloud.io');
+  ga('send', 'pageview');
+</script>
+
+    
+    <script src="https://assets-production.packagecloud.io/assets/packs/app-455f6289f87b56d40b21.js"></script>
+    
+    <!-- Only load the billing history js on the billing
+         history page and only after jquery ($) has loaded -->
+    
+    <div id="cookie-popover" class="cookie-popover" style="display:none;">
+  <p>We use cookies to enhance the user experience on packagecloud.<br>By using our site, you acknowledge that you have read, understand, and agree to our <br> <a href="https://packagecloud.io/legal/cookies">Cookie Policy</a>, <a href="https://packagecloud.io/legal/privacy">Privacy Policy</a>, and our <a href="https://packagecloud.io/legal/tos">Terms of Service</a>.<br> By continuing to browse this site you are agreeing to our use of cookies.</p>
+  <div class="button-container">
+    <a href="javascript:;" onclick="closeCookiePopover()" id="cookie-consent" class="btn close"><span class="glyphicon glyphicon-ok"></span></a>
+  </div>
+</div>
+
+  </body>
+</html>
