@@ -28,13 +28,13 @@ dependencies {
   implementation 'com.google.android.gms:play-services-base:17.1.0'
   implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
-  implementation(name: 'labcavemediation-base-2.9.1', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-admob-2.9.1', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-adcolony-fat-2.9.1', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-applovin-fat-2.9.1', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-facebook-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-base-2.9.5', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-admob-2.9.5', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-adcolony-fat-2.9.5', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-applovin-fat-2.9.5', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-facebook-2.9.5', ext: 'aar')
   implementation(name: 'AudienceNetwork', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-chartboost-fat-2.9.1', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-unityads-fat-2.9.1', ext: 'aar')
-  implementation(name: 'labcavemediation-mediation-vungle-fat-2.9.1', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-chartboost-fat-2.9.5', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-unityads-fat-2.9.5', ext: 'aar')
+  implementation(name: 'labcavemediation-mediation-vungle-fat-2.9.5', ext: 'aar')
 }
