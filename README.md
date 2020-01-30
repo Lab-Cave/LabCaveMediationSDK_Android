@@ -18,9 +18,10 @@ The current version has been tested using API 21, 23, 25 and 26 and require a mi
     } 
     
     dependecies{
-        implementation(name: 'labcavemediation-base-2.9.7', ext: 'aar')
+        implementation(name: 'labcavemediation-base-2.10.0', ext: 'aar')
         implementation fileTree(dir: 'libs/libs', include: ['*.jar'])
-        implementation 'com.google.android.gms:play-services-base:+'
+        implementation 'com.google.android.gms:play-services-base:17.1.0'
+        implementation 'com.google.android.gms:play-services-ads:18.3.0'
     }
 ```
 
@@ -41,16 +42,15 @@ Make sure you add the following depending on your selected Ad Networks
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.9.7', ext: 'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
+    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.10.0', ext: 'aar')
 }
 ```
 **Admob**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-admob-2.9.7', ext: 'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
+    implementation(name: 'labcavemediation-mediation-admob-2.10.0', ext: 'aar')
+    implementation 'com.google.android.gms:play-services-ads:18.3.0'
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 }
 ```
@@ -66,9 +66,8 @@ Add to your manifest file :
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-applovin-fat-2.9.7', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-applovin-fat-2.10.0', ext: 'aar')
     implementation(name:'recyclerview-v7', ext:'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
 
@@ -76,59 +75,53 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.9.7', ext: 'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
+    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.10.0', ext: 'aar')
 }
 ```
 **Facebook**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-facebook-2.9.7', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-facebook-2.10.0', ext: 'aar')
     implementation(name: 'AudienceNetwork', ext: 'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
 **Fyber**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-fyber-2.9.7', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-fyber-2.10.0', ext: 'aar')
     implementation(name:'ia-mraid-kit-release-7.3.3', ext:'aar')
     implementation(name:'ia-sdk-core-release-7.3.3', ext:'aar')
     implementation(name:'ia-video-kit-release-7.3.3', ext:'aar')   
-    implementation 'com.google.android.gms:play-services-ads:+'
 }
 ```
 **Ironsource**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-ironsource-ironsource-fat-2.9.7', ext: 'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
+    implementation(name: 'labcavemediation-ironsource-ironsource-fat-2.10.0', ext: 'aar')
 }
 ```
 **Mintegral**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-mintegral-fat-2.9.7', ext: 'aar')
-    implementation 'com.google.android.gms:play-services-ads:+'
+    implementation(name: 'labcavemediation-mediation-mintegral-fat-2.10.0', ext: 'aar')
 }
 ```
 **UnityAds**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-unityads-fat-2.9.7', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-unityads-fat-2.10.0', ext: 'aar')
 }
 ```
 **Vungle**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-vungle-fat-2.9.7', ext: 'aar')
-    implementation 'com.google.android.gms:play-services- ads:+'
+    implementation(name: 'labcavemediation-mediation-vungle-fat-2.10.0', ext: 'aar')
 }
 ```
 
@@ -245,7 +238,11 @@ MediationType.INTERSTITIAL
 MediationType.REWARDED_VIDEO
 MediationType.BANNER
 ```
+Starting from SDK 2.10, you can also set capping for your ad locations in order to tweak your monetization. You can check if an ad location has reached its capping using this method:
+```java
+LabCaveMediation.isAdLocationCapped(String adLocation, MediationType mediationType);
 
+```
 ## Interstitial
 
 ```java
