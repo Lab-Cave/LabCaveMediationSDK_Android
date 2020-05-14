@@ -18,7 +18,7 @@ The current version has been tested using API 21, 23, 25 and 26 and require a mi
     } 
     
     dependecies{
-        implementation(name: 'labcavemediation-base-2.11.2', ext: 'aar')
+        implementation(name: 'labcavemediation-base-2.12.0', ext: 'aar')
         implementation fileTree(dir: 'libs/libs', include: ['*.jar'])
         implementation 'com.google.android.gms:play-services-base:17.1.0'
         implementation 'com.google.android.gms:play-services-ads:18.3.0'
@@ -42,14 +42,14 @@ Make sure you add the following depending on your selected Ad Networks
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.12.0', ext: 'aar')
 }
 ```
 **Admob**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-admob-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-admob-2.12.0', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:18.3.0'
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 }
@@ -66,7 +66,7 @@ Add to your manifest file :
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-applovin-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-applovin-fat-2.12.0', ext: 'aar')
     implementation(name:'recyclerview-v7', ext:'aar')
 }
 ```
@@ -75,14 +75,14 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.12.0', ext: 'aar')
 }
 ```
 **Facebook**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-facebook-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-facebook-2.12.0', ext: 'aar')
     implementation(name: 'AudienceNetwork', ext: 'aar')
 }
 ```
@@ -90,7 +90,7 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-fyber-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-fyber-2.12.0', ext: 'aar')
     implementation(name:'ia-mraid-kit-release-7.3.3', ext:'aar')
     implementation(name:'ia-sdk-core-release-7.3.3', ext:'aar')
     implementation(name:'ia-video-kit-release-7.3.3', ext:'aar')   
@@ -100,28 +100,28 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-ironsource-ironsource-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-ironsource-ironsource-fat-2.12.0', ext: 'aar')
 }
 ```
 **Mintegral**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-mintegral-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-mintegral-fat-2.12.0', ext: 'aar')
 }
 ```
 **UnityAds**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-unityads-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-unityads-fat-2.12.0', ext: 'aar')
 }
 ```
 **Vungle**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-vungle-fat-2.11.2', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-vungle-fat-2.12.0', ext: 'aar')
 }
 ```
 
@@ -317,6 +317,19 @@ LabCaveMediation.setUserConsent(this, false);
 
 LabCaveMediation.getUserConsent();
 ```
+
+### IAPs Event (SDK 2.12 and above)
+>We offer the following optional methods to record purchase events (and associate revenue to them) and calculate your LTV (Ads + IAPs). This feature is completely independent of the ads integration.
+```java
+LabCaveMediation.purchaseEvent(revenue, currency, productId, quantity, orderId);
+```
+You should send us the parameters following this format:
+Revenue: The total revenue from that in-app purchase. The revenue value should not contain comma separators, currency sign, or text. A revenue event should be similar to 1234.56, for example.
+currency: You should send the currency using the [3 character ISO 4217 code](https://en.wikipedia.org/wiki/ISO_4217#Active_codes). For example: USD or EUR
+productId: You can use here the bundle id of the product. For example: "com.game.bagofcoins"
+Quantity: The number of items bought. It defaults to 1
+orderId: The confirmation ID from store in order to avoid event duplications.
+
 
 ### Proguard
 If you use proguard add these rules:
