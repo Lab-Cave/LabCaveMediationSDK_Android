@@ -18,10 +18,10 @@ The current version has been tested using API 21, 23, 25 and 26 and require a mi
     } 
     
     dependecies{
-        implementation(name: 'labcavemediation-base-2.12.0', ext: 'aar')
+        implementation(name: 'labcavemediation-base-2.12.2', ext: 'aar')
         implementation fileTree(dir: 'libs/libs', include: ['*.jar'])
-        implementation 'com.google.android.gms:play-services-base:17.1.0'
-        implementation 'com.google.android.gms:play-services-ads:18.3.0'
+        implementation 'com.google.android.gms:play-services-base:17.3.0'
+        implementation 'com.google.android.gms:play-services-ads:19.2.0'
     }
 ```
 
@@ -42,14 +42,14 @@ Make sure you add the following depending on your selected Ad Networks
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-adcolony-fat-2.12.2', ext: 'aar')
 }
 ```
 **Admob**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-admob-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-admob-2.12.2', ext: 'aar')
     implementation 'com.google.android.gms:play-services-ads:18.3.0'
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 }
@@ -66,7 +66,7 @@ Add to your manifest file :
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-applovin-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-applovin-fat-2.12.2', ext: 'aar')
     implementation(name:'recyclerview-v7', ext:'aar')
 }
 ```
@@ -75,53 +75,77 @@ dependencies {
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-chartboost-fat-2.12.2', ext: 'aar')
 }
 ```
 **Facebook**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-facebook-2.12.0', ext: 'aar')
-    implementation(name: 'AudienceNetwork', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-facebook-2.12.2', ext: 'aar')
+    implementation(name:'libs/AudienceNetwork', ext:'aar')
 }
 ```
 **Fyber**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-fyber-2.12.0', ext: 'aar')
-    implementation(name:'ia-mraid-kit-release-7.3.3', ext:'aar')
-    implementation(name:'ia-sdk-core-release-7.3.3', ext:'aar')
-    implementation(name:'ia-video-kit-release-7.3.3', ext:'aar')   
+    implementation(name: 'labcavemediation-mediation-fyber-2.12.2', ext: 'aar')
+    implementation(name:'libs/ia-mraid-kit-release-7.5.4', ext:'aar')
+    implementation(name:'libs/ia-sdk-core-release-7.5.4', ext:'aar')
+    implementation(name:'libs/ia-video-kit-release-7.5.4', ext:'aar')  
 }
 ```
 **Ironsource**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-ironsource-ironsource-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-ironsource-ironsource-fat-2.12.2', ext: 'aar')
 }
 ```
 **Mintegral**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-mintegral-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-mintegral-fat-2.12.2', ext: 'aar')
+}
+```
+**MyTarget**
+
+```java
+dependencies {
+  implementation(name: 'labcavemediation-mediation-mytarget-aar-2.12.2', ext: 'aar')
+    implementation(name:'libs/mytarget-sdk-5.8.1', ext:'aar')
+}
+```
+
+**Pangle**
+
+```java
+dependencies {
+    implementation(name: 'labcavemediation-mediation-pangle-aar-2.12.2', ext: 'aar')
+    implementation(name:'libs/open_ad_sdk', ext:'aar')
+}
+```
+**TapJoy**
+
+```java
+dependencies {
+    implementation(name: 'labcavemediation-mediation-tapjoy-fat-2.12.2', ext: 'aar')
 }
 ```
 **UnityAds**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-unityads-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-unityads-fat-2.12.2', ext: 'aar')
 }
 ```
 **Vungle**
 
 ```java
 dependencies {
-    implementation(name: 'labcavemediation-mediation-vungle-fat-2.12.0', ext: 'aar')
+    implementation(name: 'labcavemediation-mediation-vungle-fat-2.12.2', ext: 'aar')
 }
 ```
 
